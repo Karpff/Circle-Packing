@@ -84,7 +84,7 @@ window.addEventListener("load",_=>
 
   function animate()
   {
-    for(let j=0;j<500;j++)
+    for(let j=0;j<50;j++)
     {
       var attempts = 1000;
       var failed = true;
