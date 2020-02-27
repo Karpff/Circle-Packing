@@ -11,7 +11,7 @@ var cir = [];
 var poppin = false;
 
 //Config
-var growRate = 0.5;
+var growRate = 1;
 
 window.addEventListener("load",_=>
 {
@@ -111,8 +111,8 @@ window.addEventListener("load",_=>
         }
       }
     }
-    if(growRate > 0.1)growRate -= 0.0001;
-    else growRate = 1;
+    //if(growRate > 0.1)growRate -= 0.0001;
+    //else growRate = 1;
     window.requestAnimationFrame(animate);
   }
   animate();
