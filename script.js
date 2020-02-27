@@ -1,23 +1,29 @@
+var canvas =  document.getElementById("canvas");
+canvas.width = 1000;
+canvas.height = 600;
+var c = canvas.getContext('2d');
+
+var photo;
+var image;
+var d;
+
+var cir = [];
+var poppin = false;
+
+//Config
+var growRate = 0.5;
+
 window.addEventListener("load",_=>
 {
-  var canvas =  document.getElementById("canvas");
-  canvas.width = 1000;
-  canvas.height = 600;
-  var c = canvas.getContext('2d');
+  
 
-  var photo = document.getElementById("photo");
-  var image = document.getElementById("image");
+  photo = document.getElementById("photo");
+  image = document.getElementById("image");
   image.width = 1000;
   image.height = 600;
-  var d = image.getContext('2d');
+  d = image.getContext('2d');
 
   d.drawImage(photo,0,0,1000,600);
-
-  var cir = [];
-  var poppin = false;
-
-  //Config
-  var growRate = 0.5;
 
   window.addEventListener('mousedown',function(e)
   {
