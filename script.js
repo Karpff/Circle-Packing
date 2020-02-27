@@ -74,6 +74,9 @@ window.addEventListener("load",_=>
   c.fillStyle = "black";
   c.fillRect(0,0,canvas.width,canvas.height);
 
+  var lastLoop = new Date();
+  var recentFPS = [];
+
   function animate()
   {
     for(let j=0;j<50;j++)
@@ -116,6 +119,13 @@ window.addEventListener("load",_=>
     }
     //if(growRate > 0.1)growRate -= 0.0001;
     //else growRate = 1;
+
+    let thisLoop = new Date();
+    let fps = 1000/(thisLoop-lastLoop);
+    recentFPS.unshift(fps);
+    if(recentFPS.length>100)recentFPS.pop();
+    lastLoop = thisLoop;
+    fps = Math.round(recentFPS.reduce(sum)/recentFPS.length);
     window.requestAnimationFrame(animate);
   }
   animate();
