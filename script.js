@@ -11,7 +11,7 @@ var cir = [];
 var poppin = false;
 
 //Config
-var growRate = 1;
+var growRate = 10;
 
 window.addEventListener("load",_=>
 {
