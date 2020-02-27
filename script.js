@@ -11,7 +11,7 @@ var cir = [];
 var poppin = false;
 
 //Config
-var growRate = 10;
+var growRate = 1;
 
 window.addEventListener("load",_=>
 {
@@ -76,6 +76,8 @@ window.addEventListener("load",_=>
 
   function animate()
   {
+    for(let i=0;i<3;i++)
+    {
     var attempts = 1000;
     var failed = true;
     while(failed && attempts > 0)
@@ -92,6 +94,7 @@ window.addEventListener("load",_=>
         }
       }
     }
+  }
     var p = d.getImageData(newC.x, newC.y, 1, 1).data;
     cir.push(new circle(newC.x,newC.y,p));
     for(var i=0;i<cir.length;i++)
