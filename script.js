@@ -84,25 +84,25 @@ window.addEventListener("load",_=>
 
   function animate()
   {
-    for(let j=0;j<50;j++)
+    for(let j=0;j<500;j++)
     {
-    var attempts = 100;
-    var failed = true;
-    while(failed && attempts > 0)
-    {
-      failed = false;
-      var newC = { x: Math.random()*canvas.width, y: Math.random()*canvas.height};
-      for(var i=0;i<cir.length;i++)
+      var attempts = 100;
+      var failed = true;
+      while(failed && attempts > 0)
       {
-        if(distance(newC,cir[i]) < cir[i].r+3)
+        failed = false;
+        var newC = { x: Math.random()*canvas.width, y: Math.random()*canvas.height};
+        for(var i=0;i<cir.length;i++)
         {
-          failed = true;
-          attempts--;
-          break;
+          if(distance(newC,cir[i]) < cir[i].r+3)
+          {
+            failed = true;
+            attempts--;
+            break;
+          }
         }
       }
     }
-  }
     var p = d.getImageData(newC.x, newC.y, 1, 1).data;
     cir.push(new circle(newC.x,newC.y,p));
     for(var i=0;i<cir.length;i++)
