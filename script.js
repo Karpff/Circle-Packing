@@ -126,6 +126,7 @@ window.addEventListener("load",_=>
     if(recentFPS.length>100)recentFPS.pop();
     lastLoop = thisLoop;
     fps = Math.round(recentFPS.reduce(sum)/recentFPS.length);
+    console.log(fps);
     window.requestAnimationFrame(animate);
   }
   animate();
