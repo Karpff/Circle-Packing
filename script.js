@@ -15,8 +15,6 @@ var growRate = 0.5;
 
 window.addEventListener("load",_=>
 {
-  
-
   photo = document.getElementById("photo");
   image = document.getElementById("image");
   image.width = 1000;
