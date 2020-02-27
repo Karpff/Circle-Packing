@@ -86,7 +86,7 @@ window.addEventListener("load",_=>
   {
     for(let j=0;j<500;j++)
     {
-      var attempts = 100;
+      var attempts = 1000;
       var failed = true;
       while(failed && attempts > 0)
       {
