@@ -77,6 +77,11 @@ window.addEventListener("load",_=>
   var lastLoop = new Date();
   var recentFPS = [];
 
+  function sum(total, num)
+  {
+    return total + num;
+  }
+
   function animate()
   {
     for(let j=0;j<50;j++)
